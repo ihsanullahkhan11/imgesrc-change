@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Changer</title>
+</head>
+<style>
+     body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+     }
+
+     img{
+        width: 300px;
+        height: 300px;
+     }
+
+</style>
+<body>
+    <div class="container">
+        <!-- Default image ha  -->
+        <img src="" alt="Default Image" id="defaultImg"><br>
+        
+        <!-- Input field ha jes ma  new image URL js ki through apply kar skti ha -->
+        <input type="text" id="inputImg" placeholder="Enter image URL">
+    </div>
+    
+    <!-- yi button ha jes ma funcation apply keya ha  ges ma onclick fun apply keya ha-->
+    <button id="button" onclick="srcChange()">Apply</button>
+
+    <script>
+        var defaultImg = document.getElementById("defaultImg");  //yi imge ka refrence ha
+        var inputImg = document.getElementById("inputImg");   //yi input ka reference ha   
+
+        function srcChange() {
+            
+            defaultImg.src = inputImg.value;
+        }
+    </script>
+</body>
+</html>
